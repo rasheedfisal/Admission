@@ -1,36 +1,65 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import useFormContext from "../../hooks/useFormContext";
+import PhoneInput from "react-phone-number-input";
+
+import MapPicker from "react-google-map-picker";
+// import LocationPicker from "react-leaflet-location-picker";
+
+const DefaultLocation = { lat: 15.500654, lng: 32.559898 };
+const DefaultZoom = 10;
+
+// const pointVals = [
+//   [50, 2],
+
+// ];
+// const pointMode = {
+//   banner: true,
+//   control: {
+//     values: pointVals,
+//     onClick: (point) =>
+//       console.log("I've just been clicked on the map!", point),
+//     onRemove: (point) =>
+//       console.log("I've just been clicked for removal :(", point),
+//   },
+// };
+// const circleMode = {
+//   banner: false,
+// };
+
 const GardianInfo = () => {
-  const { data, handleChange } = useFormContext();
+  const [defaultLocation, setDefaultLocation] = useState(DefaultLocation);
+
+  const [location, setLocation] = useState(defaultLocation);
+  const [zoom, setZoom] = useState(DefaultZoom);
+
+  // useEffect(() => {
+  //   handleCustomElementChange(location.lat + "," + location.lng, "g_location");
+  // }, [location]);
+
+  function handleChangeLocation(lat, lng) {
+    setLocation({ lat: lat, lng: lng });
+  }
+
+  function handleChangeZoom(newZoom) {
+    setZoom(newZoom);
+  }
+
+  function handleResetLocation() {
+    setDefaultLocation({ ...DefaultLocation });
+    setZoom(DefaultZoom);
+  }
+  const { data, handleChange, handleCustomElementChange } = useFormContext();
 
   const content = (
     <div className="flex flex-col">
-      <div className="flex items-center justify-start gap-5 flex-wrap">
-        <div className="form-check">
-          <input
-            className="form-check-input h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-            type="checkbox"
-            onChange={handleChange}
-            checked={data.sameAsFather}
-          />
-          <label className="form-check-label inline-block text-gray-800 dark:text-gray-100">
-            Same As Father
-          </label>
-        </div>
-        <div className="form-check">
-          <input
-            className="form-check-input h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-            type="checkbox"
-            onChange={handleChange}
-            checked={data.sameAsMother}
-          />
-          <label className="form-check-label inline-block text-gray-800 dark:text-gray-100">
-            Same As Mother
-          </label>
-        </div>
-      </div>
+      {/* <div className="flex items-center justify-start gap-5 flex-wrap">
+        
+       
+      </div> */}
 
-      <label htmlFor="g_title">Title</label>
+      <label htmlFor="g_title">
+        Title <span className="text-red-600">*</span>
+      </label>
       <select
         id="g_title"
         className="form-textbox"
@@ -38,6 +67,7 @@ const GardianInfo = () => {
         value={data.g_title}
         onChange={handleChange}
       >
+        <option value="">[Select]</option>
         <option value="Mr">Mr.</option>
         <option value="Mrs">Mrs.</option>
         <option value="Ms">Ms.</option>
@@ -45,26 +75,28 @@ const GardianInfo = () => {
 
       <div className="flex items-center justify-between gap-5 flex-wrap">
         <div className="flex flex-col w-full">
-          <label htmlFor="g_firstName">First Name</label>
+          <label htmlFor="g_firstName">
+            1st Name <span className="text-red-600">*</span>
+          </label>
           <input
             type="text"
             className="form-textbox"
             id="g_firstName"
             name="g_firstName"
-            placeholder="Jane"
             pattern="([A-Z])[\w+.]{1,}"
             value={data.g_firstName}
             onChange={handleChange}
           />
         </div>
         <div className="flex flex-col w-full">
-          <label htmlFor="g_secondName">Second Name</label>
+          <label htmlFor="g_secondName">
+            2nd Name <span className="text-red-600">*</span>
+          </label>
           <input
             type="text"
             className="form-textbox"
             id="g_secondName"
             name="g_secondName"
-            placeholder="Doe"
             pattern="([A-Z])[\w+.]{1,}"
             value={data.g_secondName}
             onChange={handleChange}
@@ -73,26 +105,28 @@ const GardianInfo = () => {
       </div>
       <div className="flex items-center justify-between gap-5 flex-wrap">
         <div className="flex flex-col w-full">
-          <label htmlFor="g_middleName">Middle Name</label>
+          <label htmlFor="g_middleName">
+            3rd Name <span className="text-red-600">*</span>
+          </label>
           <input
             type="text"
             className="form-textbox"
             id="g_middleName"
             name="g_middleName"
-            placeholder="Middle Name"
             pattern="([A-Z])[\w+.]{1,}"
             value={data.g_middleName}
             onChange={handleChange}
           />
         </div>
         <div className="flex flex-col w-full">
-          <label htmlFor="g_surname">Surname Name</label>
+          <label htmlFor="g_surname">
+            4th Name <span className="text-red-600">*</span>
+          </label>
           <input
             type="text"
             className="form-textbox"
             id="g_surname"
             name="g_surname"
-            placeholder="Surname Name"
             pattern="([A-Z])[\w+.]{1,}"
             value={data.g_surname}
             onChange={handleChange}
@@ -100,56 +134,58 @@ const GardianInfo = () => {
         </div>
       </div>
 
-      <label htmlFor="g_email">Email</label>
+      <label htmlFor="g_email">
+        Email <span className="text-red-600">*</span>
+      </label>
       <input
         type="email"
         className="form-textbox"
         id="g_email"
         name="g_email"
-        placeholder="email"
         value={data.g_email}
         onChange={handleChange}
       />
 
       <div className="flex items-center justify-between gap-5 flex-wrap">
         <div className="flex flex-col w-full">
-          <label htmlFor="g_phone1">Phone 1</label>
-          <input
-            type="text"
+          <label htmlFor="g_phone1">
+            Phone 1 <span className="text-red-600">*</span>
+          </label>
+          <PhoneInput
+            placeholder="Enter phone number"
             className="form-textbox"
             id="g_phone1"
             name="g_phone1"
-            placeholder="Phone 1"
             value={data.g_phone1}
-            onChange={handleChange}
+            onChange={(e) => handleCustomElementChange(e, "g_phone1")}
           />
         </div>
         <div className="flex flex-col w-full">
-          <label htmlFor="g_phone1">Phone 2</label>
-          <input
-            type="text"
+          <label htmlFor="g_phone2">Phone 2</label>
+          <PhoneInput
+            placeholder="Enter phone number"
             className="form-textbox"
-            id="g_phone1"
-            name="g_phone1"
-            placeholder="Phone 2"
-            value={data.g_phone1}
-            onChange={handleChange}
+            id="g_phone2"
+            name="g_phone2"
+            value={data.g_phone2}
+            onChange={(e) => handleCustomElementChange(e, "g_phone2")}
           />
         </div>
       </div>
 
-      <label htmlFor="g_address">Address</label>
+      <label htmlFor="g_address">
+        Address <span className="text-red-600">*</span>
+      </label>
       <input
         type="text"
         className="form-textbox"
         id="g_address"
         name="g_address"
-        placeholder="Address"
         value={data.g_address}
         onChange={handleChange}
       />
 
-      <label htmlFor="g_religion">Religion</label>
+      {/* <label htmlFor="g_religion">Religion</label>
       <select
         id="g_religion"
         className="form-textbox"
@@ -160,9 +196,9 @@ const GardianInfo = () => {
         <option value="Muslim">Muslim</option>
         <option value="Christian">Christian</option>
         <option value="jows">jows</option>
-      </select>
+      </select> */}
 
-      <label htmlFor="g_country">Country</label>
+      {/* <label htmlFor="g_country">Country</label>
       <select
         id="g_country"
         className="form-textbox"
@@ -173,7 +209,41 @@ const GardianInfo = () => {
         <option value="Sudan">Sudan</option>
         <option value="Egypt">Egypt</option>
         <option value="UAE">UAE</option>
-      </select>
+      </select> */}
+
+      <label htmlFor="g_location">
+        Location <span className="text-red-600">*</span>
+      </label>
+      <input
+        type="text"
+        className="form-textbox"
+        id="g_location"
+        name="g_location"
+        disabled
+        value={data.g_location}
+      />
+
+      <button
+        type="button"
+        className="bg-transparent block mt-3 mb-3 hover:bg-Teal text-blue-dark font-semibold hover:text-white py-2 px-4 border border-blue hover:border-transparent rounded cursor-pointer"
+        onClick={handleResetLocation}
+      >
+        Reset Location
+      </button>
+      <div>
+        <MapPicker
+          defaultLocation={defaultLocation}
+          zoom={zoom}
+          mapTypeId="roadmap"
+          style={{ height: "700px" }}
+          onChangeLocation={(lat, lng) =>
+            handleCustomElementChange(lat + "," + lng, "g_location")
+          }
+          onChangeZoom={handleChangeZoom}
+          apiKey="AIzaSyD07E1VvpsN_0FvsmKAj4nK9GnLq-9jtj8"
+        />
+        {/* <LocationPicker pointMode={pointMode} circleMode={circleMode} />; */}
+      </div>
     </div>
   );
 

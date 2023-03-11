@@ -1,0 +1,4 @@
+- remove title from f and m
+- remove coutry from g and f and m 
+- g is before f
+- add the religion to the student

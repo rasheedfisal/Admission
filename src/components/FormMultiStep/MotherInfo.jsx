@@ -1,11 +1,12 @@
 import React from "react";
 import useFormContext from "../../hooks/useFormContext";
+import PhoneInput from "react-phone-number-input";
 const MotherInfo = () => {
-  const { data, handleChange } = useFormContext();
+  const { data, handleChange, handleCustomElementChange } = useFormContext();
 
   const content = (
     <div className="flex flex-col">
-      <label htmlFor="m_title">Title</label>
+      {/* <label htmlFor="m_title">Title</label>
       <select
         id="m_title"
         className="form-textbox"
@@ -16,115 +17,90 @@ const MotherInfo = () => {
         <option value="Mr">Mr.</option>
         <option value="Mrs">Mrs.</option>
         <option value="Ms">Ms.</option>
-      </select>
+      </select> */}
 
-      <div className="flex items-center justify-between gap-5 flex-wrap">
-        <div className="flex flex-col w-full">
-          <label htmlFor="m_firstName">First Name</label>
-          <input
-            type="text"
-            className="form-textbox"
-            id="m_firstName"
-            name="m_firstName"
-            placeholder="Jane"
-            pattern="([A-Z])[\w+.]{1,}"
-            value={data.m_firstName}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="flex flex-col w-full">
-          <label htmlFor="m_secondName">Second Name</label>
-          <input
-            type="text"
-            className="form-textbox"
-            id="m_secondName"
-            name="m_secondName"
-            placeholder="Doe"
-            pattern="([A-Z])[\w+.]{1,}"
-            value={data.m_secondName}
-            onChange={handleChange}
-          />
-        </div>
-      </div>
-      <div className="flex items-center justify-between gap-5 flex-wrap">
-        <div className="flex flex-col w-full">
-          <label htmlFor="m_middleName">Middle Name</label>
-          <input
-            type="text"
-            className="form-textbox"
-            id="m_middleName"
-            name="m_middleName"
-            placeholder="Middle Name"
-            pattern="([A-Z])[\w+.]{1,}"
-            value={data.m_middleName}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="flex flex-col w-full">
-          <label htmlFor="m_surname">Surname Name</label>
-          <input
-            type="text"
-            className="form-textbox"
-            id="m_surname"
-            name="m_surname"
-            placeholder="Surname Name"
-            pattern="([A-Z])[\w+.]{1,}"
-            value={data.m_surname}
-            onChange={handleChange}
-          />
-        </div>
+      <div className="form-check">
+        <input
+          className="form-check-input h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+          type="checkbox"
+          name="sameAsMother"
+          id="sameAsMother"
+          onChange={handleChange}
+          checked={data.sameAsMother}
+        />
+        <label className="form-check-label inline-block text-gray-800 dark:text-gray-100">
+          Same As Gardian
+        </label>
       </div>
 
-      <label htmlFor="m_email">Email</label>
+      <div className="flex flex-col w-full">
+        <label htmlFor="m_firstName">
+          Full Name <span className="text-red-600">*</span>
+        </label>
+        <input
+          type="text"
+          className="form-textbox"
+          id="m_fullname"
+          name="m_fullname"
+          pattern="([A-Z])[\w+.]{1,}"
+          value={data.m_fullname}
+          onChange={handleChange}
+        />
+      </div>
+
+      <label htmlFor="m_email">
+        Email <span className="text-red-600">*</span>
+      </label>
       <input
         type="email"
         className="form-textbox"
         id="m_email"
         name="m_email"
-        placeholder="email"
         value={data.m_email}
         onChange={handleChange}
       />
 
       <div className="flex items-center justify-between gap-5 flex-wrap">
         <div className="flex flex-col w-full">
-          <label htmlFor="m_phone1">Phone 1</label>
-          <input
-            type="text"
+          <label htmlFor="m_phone1">
+            Phone 1 <span className="text-red-600">*</span>
+          </label>
+
+          <PhoneInput
+            placeholder="Enter phone number"
             className="form-textbox"
             id="m_phone1"
             name="m_phone1"
-            placeholder="Phone 1"
             value={data.m_phone1}
-            onChange={handleChange}
+            onChange={(e) => handleCustomElementChange(e, "m_phone1")}
           />
         </div>
         <div className="flex flex-col w-full">
-          <label htmlFor="m_phone1">Phone 2</label>
-          <input
-            type="text"
+          <label htmlFor="m_phone2">Phone 2</label>
+
+          <PhoneInput
+            placeholder="Enter phone number"
             className="form-textbox"
-            id="m_phone1"
-            name="m_phone1"
-            placeholder="Phone 2"
-            value={data.m_phone1}
-            onChange={handleChange}
+            id="f_phone2"
+            name="f_phone2"
+            value={data.f_phone2}
+            onChange={(e) => handleCustomElementChange(e, "f_phone2")}
           />
         </div>
       </div>
-
-      <label htmlFor="m_address">Address</label>
+      <label htmlFor="m_address">
+        Address <span className="text-red-600">*</span>
+      </label>
       <input
         type="text"
         className="form-textbox"
         id="m_address"
         name="m_address"
-        placeholder="Address"
         value={data.m_address}
         onChange={handleChange}
       />
 
-      <label htmlFor="m_religion">Religion</label>
+      {/* <label htmlFor="m_religion">Religion</label>
       <select
         id="m_religion"
         className="form-textbox"
@@ -135,9 +111,9 @@ const MotherInfo = () => {
         <option value="Muslim">Muslim</option>
         <option value="Christian">Christian</option>
         <option value="jows">jows</option>
-      </select>
+      </select> */}
 
-      <label htmlFor="m_country">Country</label>
+      {/* <label htmlFor="m_country">Country</label>
       <select
         id="m_country"
         className="form-textbox"
@@ -148,7 +124,7 @@ const MotherInfo = () => {
         <option value="Sudan">Sudan</option>
         <option value="Egypt">Egypt</option>
         <option value="UAE">UAE</option>
-      </select>
+      </select> */}
     </div>
   );
 

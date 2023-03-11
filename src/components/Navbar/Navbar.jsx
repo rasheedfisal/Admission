@@ -3,7 +3,7 @@ import { navLinks } from "../../Data";
 import { HiMenuAlt1, HiX } from "react-icons/hi";
 import MobileNavLinks from "./MobileNavLinks";
 import NavLink from "./NavLink";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -33,7 +33,7 @@ const Navbar = () => {
               onClick={() => setToggle(true)}
             />
             <div className="text-xl text-Teal uppercase tracking-wide font-bold">
-              School
+              <Link to="/">School</Link>
             </div>
           </div>
           <div className="sm:flex items-center hidden">
