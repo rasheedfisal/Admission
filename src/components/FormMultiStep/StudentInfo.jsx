@@ -13,7 +13,7 @@ const StudentInfo = () => {
               </div>
               <div className="relative w-full px-4 max-w-full flex-grow flex-1 text-right">
                 <Link
-                  to="/categories/add"
+                  to="/student/add"
                   className="bg-primary hover:bg-primary-dark text-white focus:outline-none focus:ring focus:ring-primary focus:ring-offset-1 focus:ring-offset-white dark:focus:ring-offset-dark text-xs font-bold uppercase px-3 py-1 rounded outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                 >
                   Add
@@ -23,7 +23,6 @@ const StudentInfo = () => {
           </div>
           <div className="block w-full relative overflow-x-auto">
             <div className="relative">
-              {isDeleteing && <TableLoader />}
               <table className="items-center bg-transparent w-full border-collapse ">
                 <thead>
                   <tr>
@@ -31,14 +30,20 @@ const StudentInfo = () => {
                       Name
                     </th>
                     <th className="px-6 bg-gray-50 text-gray-500 align-middle border border-solid border-gray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                      Description
+                      Birth Date
                     </th>
                     <th className="px-6 bg-gray-50 text-gray-500 align-middle border border-solid border-gray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                      Action
+                      Class
+                    </th>
+                    <th className="px-6 bg-gray-50 text-gray-500 align-middle border border-solid border-gray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                      Gender
+                    </th>
+                    <th className="px-6 bg-gray-50 text-gray-500 align-middle border border-solid border-gray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                      Attachments
                     </th>
                   </tr>
                 </thead>
-                <tbody>
+                {/* <tbody>
                   {categories?.map((category) => (
                     <tr key={category.id}>
                       <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left  ">
@@ -90,7 +95,7 @@ const StudentInfo = () => {
                       </td>
                     </tr>
                   ))}
-                </tbody>
+                </tbody> */}
               </table>
             </div>
           </div>
