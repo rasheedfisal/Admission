@@ -4,6 +4,7 @@ import FormInput from "./FormInput";
 import useFormContext from "../../hooks/useFormContext";
 import "react-phone-number-input/style.css";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 import { AiOutlineRight, AiOutlineLeft } from "react-icons/ai";
 
@@ -32,7 +33,10 @@ const Form = () => {
     setLoading(true);
     console.log(JSON.stringify(data));
     setLoading(false);
-    navigate("/");
+
+    toast.success("Information Submitted Successfully.");
+
+    setTimeout(() => navigate("/"), 6000);
   };
 
   const content = (
@@ -50,7 +54,7 @@ const Form = () => {
                 {title[page]}
               </h2>
 
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between items-center flex-wrap">
                 <div className="flex justify-start">
                   <label className={`text-red-600 ${prevHide ? "hidden" : ""}`}>
                     Required: *

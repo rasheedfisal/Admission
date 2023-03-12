@@ -6,9 +6,11 @@ export const FormProvider = ({ children }) => {
   const title = {
     0: "Terms And Conditions",
     1: "Gardian Information",
-    2: "Father Information",
-    3: "Mother Information",
-    4: "Student Information",
+    2: "Emergency Information",
+    3: "Martial Status for Parents",
+    4: "Father Information",
+    5: "Mother Information",
+    6: "Student Information",
   };
 
   const [page, setPage] = useState(0);
@@ -45,6 +47,12 @@ export const FormProvider = ({ children }) => {
     g_address: "",
     g_location: "",
     /////////////
+    e_relation: "",
+    e_contact: "",
+    e_email: "",
+    ////////////
+    mr_status: "",
+    ////////////
     s_info: [],
   });
 
@@ -140,21 +148,26 @@ export const FormProvider = ({ children }) => {
     .every(Boolean);
 
   const canNextPage2 = Object.keys(data)
-    .filter((key) => key.startsWith("f_") && key !== "f_phone2")
+    .filter((key) => key.startsWith("e_"))
     .map((key) => data[key])
     .every(Boolean);
 
   const canNextPage3 = Object.keys(data)
-    .filter((key) => key.startsWith("m_") && key !== "m_phone2")
+    .filter((key) => key.startsWith("mr_"))
     .map((key) => data[key])
     .every(Boolean);
 
   const canNextPage4 = Object.keys(data)
-    .filter((key) => key.startsWith("std_"))
+    .filter((key) => key.startsWith("f_") && key !== "f_phone2")
     .map((key) => data[key])
     .every(Boolean);
 
   const canNextPage5 = Object.keys(data)
+    .filter((key) => key.startsWith("m_") && key !== "m_phone2")
+    .map((key) => data[key])
+    .every(Boolean);
+
+  const canNextPage6 = Object.keys(data)
     .filter((key) => key.startsWith("std_"))
     .map((key) => data[key])
     .every(Boolean);
@@ -168,7 +181,8 @@ export const FormProvider = ({ children }) => {
     (page === 2 && !canNextPage2) ||
     (page === 3 && !canNextPage3) ||
     (page === 4 && !canNextPage4) ||
-    (page === 5 && !canNextPage5);
+    (page === 5 && !canNextPage5) ||
+    (page === 6 && !canNextPage6);
 
   const prevHide = page === 0 && "hidden";
 

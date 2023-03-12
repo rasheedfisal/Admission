@@ -71,6 +71,17 @@ const StdInfo = () => {
         },
       ],
     }));
+
+    setName("");
+    setBirthDate(new Date());
+    setClassName("");
+    setGender("");
+    setReligion("");
+    setBirthCert(null);
+    setImg(null);
+    setPassport(null);
+    setDocOne(null);
+    setDocTwo(null);
   };
 
   const content = (

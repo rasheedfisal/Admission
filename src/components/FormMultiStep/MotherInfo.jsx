@@ -81,10 +81,10 @@ const MotherInfo = () => {
           <PhoneInput
             placeholder="Enter phone number"
             className="form-textbox"
-            id="f_phone2"
-            name="f_phone2"
-            value={data.f_phone2}
-            onChange={(e) => handleCustomElementChange(e, "f_phone2")}
+            id="m_phone2"
+            name="m_phone2"
+            value={data.m_phone2}
+            onChange={(e) => handleCustomElementChange(e, "m_phone2")}
           />
         </div>
       </div>

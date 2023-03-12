@@ -114,10 +114,10 @@ const FatherInfo = () => {
           <PhoneInput
             placeholder="Enter phone number"
             className="form-textbox"
-            id="g_phone2"
-            name="g_phone2"
-            value={data.g_phone2}
-            onChange={(e) => handleCustomElementChange(e, "g_phone2")}
+            id="f_phone2"
+            name="f_phone2"
+            value={data.f_phone2}
+            onChange={(e) => handleCustomElementChange(e, "f_phone2")}
           />
         </div>
       </div>

@@ -2,6 +2,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import Navbar from "./Navbar/Navbar";
 import Footer from "./container/Footer";
+import { ToastContainer } from "react-toastify";
 const Layout = () => {
   const { pathname } = useLocation();
 
@@ -44,6 +45,7 @@ const Layout = () => {
         exit="out"
         variants={variants}
       >
+        <ToastContainer />
         <Outlet />
       </motion.div>
       <Footer />

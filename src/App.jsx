@@ -2,6 +2,7 @@ import { HomePage, Layout, Form } from "./components/index";
 
 import { Routes, Route } from "react-router-dom";
 import { FormProvider } from "./context/FormContext";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
