@@ -30,11 +30,15 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (data.s_info === []) {
+      toast.error("add a student before proceeding.");
+      return;
+    }
     setLoading(true);
     console.log(JSON.stringify(data));
     setLoading(false);
 
-    toast.success("Information Submitted Successfully.");
+    toast.success("information submitted successfully.");
 
     setTimeout(() => navigate("/"), 6000);
   };

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import useFormContext from "../../hooks/useFormContext";
 import FilePdfUploader from "../FilePdfUploader";
+import { toast } from "react-toastify";
 const StdInfo = () => {
   const { setData, data } = useFormContext();
   const [name, setName] = useState("");
@@ -41,14 +42,38 @@ const StdInfo = () => {
   }, [birthDate]);
 
   const AddToStudentList = () => {
-    if (name === "") return;
-    if (birthDate === "") return;
-    if (className === "") return;
-    if (gender === "") return;
-    if (religion === "") return;
-    if (img === null) return;
-    if (birthCert === null) return;
-    if (passport === null) return;
+    if (name === "") {
+      toast.error("name is required.");
+      return;
+    }
+    if (birthDate === "") {
+      toast.error("birth date is required.");
+      return;
+    }
+    if (className === "") {
+      toast.error("class is required.");
+      return;
+    }
+    if (gender === "") {
+      toast.error("gender is required.");
+      return;
+    }
+    if (religion === "") {
+      toast.error("religion is required.");
+      return;
+    }
+    if (img === null) {
+      toast.error("photo is required.");
+      return;
+    }
+    if (birthCert === null) {
+      toast.error("birth certificate is required.");
+      return;
+    }
+    if (passport === null) {
+      toast.error("passport is required.");
+      return;
+    }
     const std = {
       name,
       birthDate,
