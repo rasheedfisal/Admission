@@ -1,7 +1,8 @@
-import { HomePage, Layout, Form } from "./components/index";
+import { HomePage, Layout, Form, UpdateForm } from "./components/index";
 
 import { Routes, Route } from "react-router-dom";
 import { FormProvider } from "./context/FormContext";
+import { UpdateFormProvider } from "./context/FormUpdateContext";
 import "react-toastify/dist/ReactToastify.css";
 
 function App() {
@@ -15,6 +16,15 @@ function App() {
             <FormProvider>
               <Form />
             </FormProvider>
+          }
+        />
+
+        <Route
+          path="/old"
+          element={
+            <UpdateFormProvider>
+              <UpdateForm />
+            </UpdateFormProvider>
           }
         />
       </Route>

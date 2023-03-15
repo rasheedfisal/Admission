@@ -1,5 +1,5 @@
 import React from "react";
-import useFormContext from "../../hooks/useFormContext";
+import { default as useFormContext } from "../../hooks/useUpdateFormContext";
 import PhoneInput from "react-phone-number-input";
 
 const EmergencyInfo = () => {

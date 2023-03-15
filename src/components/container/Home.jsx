@@ -39,10 +39,11 @@ const Home = () => {
                 New Admission
               </button>
             </Link>
-
-            <button className="px-6 py-3 font-bold border border-solid border-gray rounded-lg text-sm">
-              Old Admission
-            </button>
+            <Link to="/old">
+              <button className="px-6 py-3 font-bold border border-solid border-gray rounded-lg text-sm">
+                Old Admission
+              </button>
+            </Link>
           </div>
         </div>
         <div className="md:w-[60%]">

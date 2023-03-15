@@ -1,38 +1,11 @@
 import React from "react";
-import useFormContext from "../../hooks/useFormContext";
+import { default as useFormContext } from "../../hooks/useUpdateFormContext";
 import PhoneInput from "react-phone-number-input";
 const MotherInfo = () => {
   const { data, handleChange, handleCustomElementChange } = useFormContext();
 
   const content = (
     <div className="flex flex-col">
-      {/* <label htmlFor="m_title">Title</label>
-      <select
-        id="m_title"
-        className="form-textbox"
-        name="m_title"
-        value={data.m_title}
-        onChange={handleChange}
-      >
-        <option value="Mr">Mr.</option>
-        <option value="Mrs">Mrs.</option>
-        <option value="Ms">Ms.</option>
-      </select> */}
-
-      <div className="form-check">
-        <input
-          className="form-check-input h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-          type="checkbox"
-          name="sameAsMother"
-          id="sameAsMother"
-          onChange={handleChange}
-          checked={data.sameAsMother}
-        />
-        <label className="form-check-label inline-block text-gray-800 dark:text-gray-100">
-          Same As Gardian
-        </label>
-      </div>
-
       <div className="flex flex-col w-full">
         <label htmlFor="m_firstName">
           Full Name <span className="text-red-600">*</span>

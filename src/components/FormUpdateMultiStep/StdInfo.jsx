@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import useFormContext from "../../hooks/useFormContext";
+import { default as useFormContext } from "../../hooks/useUpdateFormContext";
 import FilePdfUploader from "../FilePdfUploader";
 import { toast } from "react-toastify";
 const StdInfo = () => {
@@ -75,6 +75,7 @@ const StdInfo = () => {
       return;
     }
     const std = {
+      std_id: "new",
       name,
       birthDate,
       className,

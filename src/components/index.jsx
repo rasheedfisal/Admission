@@ -8,6 +8,7 @@ import Navbar from "./Navbar/Navbar";
 import Layout from "./Layout";
 import HomePage from "./HomePage";
 import Form from "./FormMultiStep/Form";
+import { default as UpdateForm } from "./FormUpdateMultiStep/Form";
 
 export {
   Navbar,
@@ -20,4 +21,5 @@ export {
   Layout,
   HomePage,
   Form,
+  UpdateForm,
 };

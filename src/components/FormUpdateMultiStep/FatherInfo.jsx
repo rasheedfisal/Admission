@@ -1,25 +1,11 @@
 import React from "react";
-import useFormContext from "../../hooks/useFormContext";
+import { default as useFormContext } from "../../hooks/useUpdateFormContext";
 import PhoneInput from "react-phone-number-input";
 const FatherInfo = () => {
   const { data, handleChange, handleCustomElementChange } = useFormContext();
 
   const content = (
     <div className="flex flex-col">
-      <div className="form-check">
-        <input
-          className="form-check-input h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-          type="checkbox"
-          id="sameAsFather"
-          name="sameAsFather"
-          onChange={handleChange}
-          checked={data.sameAsFather}
-        />
-        <label className="form-check-label inline-block text-gray-800 dark:text-gray-100">
-          Same As Gardian
-        </label>
-      </div>
-
       <div className="flex items-center justify-between gap-5 flex-wrap">
         <div className="flex flex-col w-full">
           <label htmlFor="f_firstName">

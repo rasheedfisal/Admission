@@ -1,12 +1,9 @@
-import React, { useState, useEffect } from "react";
-import useFormContext from "../../hooks/useFormContext";
+import React, { useState } from "react";
+import { default as useFormContext } from "../../hooks/useUpdateFormContext";
 import PhoneInput from "react-phone-number-input";
 
 import MapPicker from "react-google-map-picker";
 // import LocationPicker from "react-leaflet-location-picker";
-
-const DefaultLocation = { lat: 15.500654, lng: 32.559898 };
-const DefaultZoom = 10;
 
 // const pointVals = [
 //   [50, 2],
@@ -27,6 +24,11 @@ const DefaultZoom = 10;
 // };
 
 const GardianInfo = () => {
+  const { data, handleChange, handleCustomElementChange } = useFormContext();
+  const lat = data.g_location.split(",")[0];
+  const lng = data.g_location.split(",")[1];
+  const DefaultLocation = { lat: +lat, lng: +lng };
+  const DefaultZoom = 10;
   const [defaultLocation, setDefaultLocation] = useState(DefaultLocation);
 
   const [location, setLocation] = useState(defaultLocation);
@@ -48,7 +50,6 @@ const GardianInfo = () => {
     setDefaultLocation({ ...DefaultLocation });
     setZoom(DefaultZoom);
   }
-  const { data, handleChange, handleCustomElementChange } = useFormContext();
 
   const content = (
     <div className="flex flex-col">

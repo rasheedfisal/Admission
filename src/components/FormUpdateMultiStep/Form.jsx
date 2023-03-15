@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 
 import FormInput from "./FormInput";
-import useFormContext from "../../hooks/useFormContext";
-import { createAdmissionFn } from "../../api/admApi";
+import { default as useFormContext } from "../../hooks/useUpdateFormContext";
+import { updateAdmissionFn } from "../../api/admApi";
 import "react-phone-number-input/style.css";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { useMutation } from "@tanstack/react-query";
+
+// import { AiOutlineRight, AiOutlineLeft } from "react-icons/ai";
 
 const Form = () => {
   const navigate = useNavigate();
@@ -23,11 +25,11 @@ const Form = () => {
     submitHide,
   } = useFormContext();
 
-  const { isLoading, mutate: createAdmission } = useMutation(
-    (adm) => createAdmissionFn(adm),
+  const { isLoading, mutate: updateAdmission } = useMutation(
+    (adm) => updateAdmissionFn(adm),
     {
       onSuccess: () => {
-        toast.success("information submitted successfully.");
+        toast.success("information updated successfully.");
 
         setTimeout(() => navigate("/"), 6000);
       },
@@ -54,37 +56,6 @@ const Form = () => {
     }
 
     const formData = new FormData();
-    // formData.append("g_title", data.g_title);
-    // formData.append("g_firstName", data.g_firstName);
-    // formData.append("g_secondName", data.g_secondName);
-    // formData.append("g_middleName", data.g_middleName);
-    // formData.append("g_surname", data.g_surname);
-    // formData.append("g_email", data.g_email);
-    // formData.append("g_phone1", data.g_phone1);
-    // formData.append("g_phone2", data.g_phone2);
-    // formData.append("g_address", data.g_address);
-    // formData.append("g_location", data.g_location);
-    // formData.append("e_relation", data.e_relation);
-    // formData.append("e_contact", data.e_contact);
-    // formData.append("e_email", data.e_email);
-    // formData.append("mr_status", data.mr_status);
-    // formData.append("f_firstName", data.f_firstName);
-    // formData.append("f_secondName", data.f_secondName);
-    // formData.append("f_middleName", data.f_middleName);
-    // formData.append("f_surname", data.f_surname);
-    // formData.append("f_email", data.f_email);
-    // formData.append("f_phone1", data.f_phone1);
-    // formData.append("f_phone2", data.f_phone2);
-    // formData.append("f_address", data.f_address);
-    // formData.append("m_fullname", data.m_fullname);
-    // formData.append("m_email", data.m_email);
-    // formData.append("m_phone1", data.m_phone1);
-    // formData.append("m_phone2", data.m_phone2);
-    // formData.append("m_address", data.m_address);
-
-    // data.s_info?.map((e) => {
-    //   formData.append("s_info", e);
-    // });
 
     for (let dataKey in data) {
       if (dataKey === "s_info") {
@@ -102,25 +73,12 @@ const Form = () => {
       }
     }
 
-    // for (let key in data) {
-    //   if (typeof data[key] === "object") {
-    //     let counter = 0;
-    //     for (let subKey in data[key]) {
-    //       console.log(`${key}.${subKey}`);
-    //       // formData.append(`${key}.${subKey}`, data[key][subKey]);
-    //       counter++;
-    //     }
-    //   } else {
-    //     // formData.append(key, data[key]);
-    //   }
-    // }
-
     // Display the key/value pairs
     for (var pair of formData.entries()) {
       console.log(pair[0] + ", " + pair[1]);
     }
 
-    createAdmission(formData);
+    updateAdmission(formData);
   };
 
   const content = (
