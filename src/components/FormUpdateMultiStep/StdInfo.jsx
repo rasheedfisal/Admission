@@ -20,7 +20,7 @@ const StdInfo = () => {
     const givenYear = new Date(birthDate).getFullYear();
     const currentYear = new Date().getFullYear();
 
-    if (givenYear !== NaN) {
+    if (!isNaN(givenYear)) {
       const differ = currentYear - givenYear;
       if (differ === 1 || differ === 0) setClassName("Toddler");
       if (differ === 2) setClassName("Nursery");
@@ -183,6 +183,7 @@ const StdInfo = () => {
       <div className="flex justify-center items-center gap-5 flex-wrap">
         <FilePdfUploader
           setFileElement={setImg}
+          FileElement={img}
           acceptFiles="image/jpg, image/png, image/jpeg"
           defaultUrl=""
           label="Photo"
@@ -190,6 +191,7 @@ const StdInfo = () => {
         />
         <FilePdfUploader
           setFileElement={setBirthCert}
+          FileElement={birthCert}
           acceptFiles="*"
           defaultUrl=""
           label="Birth Certificate"
@@ -197,6 +199,7 @@ const StdInfo = () => {
         />
         <FilePdfUploader
           setFileElement={setPassport}
+          FileElement={passport}
           acceptFiles="*"
           defaultUrl=""
           label="Passport"
@@ -204,6 +207,7 @@ const StdInfo = () => {
         />
         <FilePdfUploader
           setFileElement={setDocOne}
+          FileElement={docOne}
           acceptFiles="*"
           defaultUrl=""
           label="Extra Docs1"
@@ -211,6 +215,7 @@ const StdInfo = () => {
         />
         <FilePdfUploader
           setFileElement={setDocTwo}
+          FileElement={docTwo}
           acceptFiles="*"
           defaultUrl=""
           label="Extra Docs2"

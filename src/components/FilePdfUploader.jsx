@@ -3,6 +3,7 @@ import noImg from "../assets/select-img.png";
 
 const FilePdfUploader = ({
   setFileElement,
+  FileElement,
   acceptFiles,
   defaultUrl,
   label,
@@ -26,7 +27,7 @@ const FilePdfUploader = ({
     <div className="flex flex-col items-center justify-center mt-3">
       <div className="mb-4">
         <label className="mt-2 leading-normal px-4 py-2">
-          {sourceFile !== "" ? sourceFile : ""}
+          {sourceFile !== "" && FileElement !== null ? sourceFile : ""}
         </label>
       </div>
       <label className="cursor-pointer mt-6">

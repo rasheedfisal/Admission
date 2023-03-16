@@ -16,7 +16,7 @@ const FatherInfo = () => {
           checked={data.sameAsFather}
         />
         <label className="form-check-label inline-block text-gray-800 dark:text-gray-100">
-          Same As Gardian
+          Same As Guardian
         </label>
       </div>
 

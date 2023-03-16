@@ -50,7 +50,7 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (data.s_info === []) {
+    if (data.s_info.length === 0) {
       toast.error("add a student before proceeding.");
       return;
     }

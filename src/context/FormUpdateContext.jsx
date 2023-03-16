@@ -4,8 +4,8 @@ const FormContext = createContext({});
 
 export const UpdateFormProvider = ({ children }) => {
   const title = {
-    0: "Enter Gardian Phone",
-    1: "Gardian Information",
+    0: "Enter Guardian Phone",
+    1: "Guardian Information",
     2: "Emergency Information",
     3: "Martial Status for Parents",
     4: "Father Information",
@@ -87,34 +87,41 @@ export const UpdateFormProvider = ({ children }) => {
     [...Object.values(requiredInputs)].every(Boolean) &&
     page === Object.keys(title).length - 1;
 
+  const isValidEmail = (email) => {
+    return /\S+@\S+\.\S+/.test(email);
+  };
+
   const canNextPage0 = Object.keys(data)
     .filter((key) => key.startsWith("gphone_"))
     .map((key) => data[key])
     .every(Boolean);
 
-  const canNextPage1 = Object.keys(data)
-    .filter(
-      (key) => key.startsWith("g_") && key !== "g_phone2" && key !== "g_id"
-    )
-    .map((key) => data[key])
-    .every(Boolean);
+  const canNextPage1 =
+    Object.keys(data)
+      .filter(
+        (key) => key.startsWith("g_") && key !== "g_phone2" && key !== "g_id"
+      )
+      .map((key) => data[key])
+      .every(Boolean) === isValidEmail(data.g_email);
 
-  const canNextPage2 = Object.keys(data)
-    .filter((key) => key.startsWith("e_") && key !== "e_id")
-    .map((key) => data[key])
-    .every(Boolean);
+  const canNextPage2 =
+    Object.keys(data)
+      .filter((key) => key.startsWith("e_") && key !== "e_id")
+      .map((key) => data[key])
+      .every(Boolean) === isValidEmail(data.e_email);
 
   const canNextPage3 = Object.keys(data)
     .filter((key) => key.startsWith("mr_") && key !== "mr_id")
     .map((key) => data[key])
     .every(Boolean);
 
-  const canNextPage4 = Object.keys(data)
-    .filter(
-      (key) => key.startsWith("f_") && key !== "f_phone2" && key !== "f_id"
-    )
-    .map((key) => data[key])
-    .every(Boolean);
+  const canNextPage4 =
+    Object.keys(data)
+      .filter(
+        (key) => key.startsWith("f_") && key !== "f_phone2" && key !== "f_id"
+      )
+      .map((key) => data[key])
+      .every(Boolean) === isValidEmail(data.f_email);
 
   const canNextPage5 = Object.keys(data)
     .filter(
