@@ -128,6 +128,7 @@ const StdInfo = () => {
       <input
         type="date"
         className="form-textbox"
+        placeholder="dd-mm-yyyy"
         id="std_dateofbirth"
         name="std_dateofbirth"
         value={birthDate}

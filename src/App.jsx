@@ -1,5 +1,6 @@
+import "./globals";
 import { HomePage, Layout, Form, UpdateForm } from "./components/index";
-
+import ReportViewer from "./reports/ReportViewer";
 import { Routes, Route } from "react-router-dom";
 import { FormProvider } from "./context/FormContext";
 import { UpdateFormProvider } from "./context/FormUpdateContext";
@@ -24,6 +25,15 @@ function App() {
           element={
             <UpdateFormProvider>
               <UpdateForm />
+            </UpdateFormProvider>
+          }
+        />
+
+        <Route
+          path="/print"
+          element={
+            <UpdateFormProvider>
+              <ReportViewer />
             </UpdateFormProvider>
           }
         />

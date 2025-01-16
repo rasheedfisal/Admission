@@ -1,10 +1,30 @@
 import React from "react";
 import { default as useFormContext } from "../../hooks/useUpdateFormContext";
 import DeleteIcon from "../../icons/DeleteIcon";
+import { useMutation } from "@tanstack/react-query";
+import { deleteStdFn } from "../../api/admApi";
+import { toast } from "react-toastify";
 
 const StudentInfo = () => {
   const { data, setData } = useFormContext();
-  const handleDelete = (index) => {
+  const { isLoading, mutate: deleteStd } = useMutation(
+    (id) => deleteStdFn(id),
+    {
+      onSuccess: () => {},
+      onError: (error) => {
+        console.log(error);
+        if (error) {
+          toast.error(error, {
+            position: "top-right",
+          });
+        }
+      },
+    }
+  );
+  const handleDelete = (index, id) => {
+    if (id !== "new") {
+      deleteStd(id);
+    }
     setData((prevData) => ({
       ...prevData,
       s_info: data.s_info.filter((item, idx) => idx !== index),
@@ -89,7 +109,7 @@ const StudentInfo = () => {
                       <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
                         <div className="flex">
                           <div
-                            onClick={() => handleDelete(i)}
+                            onClick={() => handleDelete(i, std.std_id)}
                             className="w-4 mr-2 mt-1 transform hover:text-red-700 hover:scale-110"
                           >
                             <DeleteIcon />

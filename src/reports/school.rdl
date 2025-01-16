@@ -1,0 +1,1700 @@
+<?xml version="1.0"?>
+<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Style>
+          <BackgroundColor>White</BackgroundColor>
+        </Style>
+        <ReportItems>
+          <Line Name="Line4">
+            <Left>6pt</Left>
+            <Top>46.45312pt</Top>
+            <Height>0pt</Height>
+            <Width>671.7656pt</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Color>#b0b0b0</Color>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Textbox Name="Textbox45">
+            <Left>49.5pt</Left>
+            <Top>341.8594pt</Top>
+            <Height>29.49609pt</Height>
+            <Width>568.5pt</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>I/We hereby certify that the information on this report is true and correct and that the contents of this report are as stated above.</Value>
+                    <Style>
+                      <FontFamily>Segoe UI</FontFamily>
+                      <Color>black</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+          </Textbox>
+          <Textbox Name="Textbox14">
+            <Left>7.73136pt</Left>
+            <Top>5.50008pt</Top>
+            <Height>13.45312pt</Height>
+            <Width>204.6797pt</Width>
+            <ZIndex>4</ZIndex>
+            <Style>
+              <VerticalAlign>Top</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Admission ID</Value>
+                    <Style>
+                      <FontFamily>Segoe UI</FontFamily>
+                      <Color>#666666</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+          </Textbox>
+          <Textbox Name="Textbox15">
+            <Left>578.707pt</Left>
+            <Top>5.49609pt</Top>
+            <Height>13.81641pt</Height>
+            <Width>104.1797pt</Width>
+            <ZIndex>5</ZIndex>
+            <Style>
+              <VerticalAlign>Top</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Date</Value>
+                    <Style>
+                      <FontFamily>Segoe UI</FontFamily>
+                      <Color>#666666</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+          </Textbox>
+          <Textbox Name="Textbox26">
+            <Left>14.47266pt</Left>
+            <Top>60.42188pt</Top>
+            <Height>15.30469pt</Height>
+            <Width>203.3086pt</Width>
+            <ZIndex>18</ZIndex>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value />
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>black</Color>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>Guardian</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>black</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+          </Textbox>
+          <Line Name="Line1">
+            <Left>227.25pt</Left>
+            <Top>58.92188pt</Top>
+            <Height>94.5pt</Height>
+            <Width>0pt</Width>
+            <Style>
+              <Border>
+                <Width>1.008pt</Width>
+                <Color>#cccbcb</Color>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Line Name="Line3">
+            <Left>453.1642pt</Left>
+            <Top>59.67188pt</Top>
+            <Height>95.25pt</Height>
+            <Width>0pt</Width>
+            <Style>
+              <Border>
+                <Width>1.008pt</Width>
+                <Color>#cccbcb</Color>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Tablix Name="Tablix1">
+            <Left>42.75pt</Left>
+            <Top>283.5pt</Top>
+            <Height>36pt</Height>
+            <Width>579.75pt</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+            <DataSetName>schoolset</DataSetName>
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>115.5pt</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>115.5pt</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>116.25pt</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>116.25pt</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>116.25pt</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>18pt</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="TextBox7">
+                          <Left>0in</Left>
+                          <Top>0in</Top>
+                          <Height>18pt</Height>
+                          <Width>115.5pt</Width>
+                          <Style>
+                            <BackgroundColor>#cccbcb</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <Border>
+                              <Color>#d3d3d3</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Name</Value>
+                                  <Style>
+                                    <FontWeight>SemiBold</FontWeight>
+                                    <Color>black</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                        </Textbox>
+                        <ColSpan>1</ColSpan>
+                        <RowSpan>1</RowSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="TextBox8">
+                          <Left>0in</Left>
+                          <Top>0in</Top>
+                          <Height>18pt</Height>
+                          <Width>115.5pt</Width>
+                          <Style>
+                            <BackgroundColor>#cccbcb</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <Border>
+                              <Color>#d3d3d3</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Birth Date</Value>
+                                  <Style>
+                                    <FontWeight>SemiBold</FontWeight>
+                                    <Color>black</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                        </Textbox>
+                        <ColSpan>1</ColSpan>
+                        <RowSpan>1</RowSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="TextBox9">
+                          <Left>0in</Left>
+                          <Top>0in</Top>
+                          <Height>18pt</Height>
+                          <Width>116.25pt</Width>
+                          <Style>
+                            <BackgroundColor>#cccbcb</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <Border>
+                              <Color>#d3d3d3</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Class</Value>
+                                  <Style>
+                                    <FontWeight>SemiBold</FontWeight>
+                                    <Color>black</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                        </Textbox>
+                        <ColSpan>1</ColSpan>
+                        <RowSpan>1</RowSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="TextBox13">
+                          <Left>0in</Left>
+                          <Top>0in</Top>
+                          <Height>18pt</Height>
+                          <Width>116.25pt</Width>
+                          <Style>
+                            <BackgroundColor>#cccbcb</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <Border>
+                              <Color>#d3d3d3</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Religion</Value>
+                                  <Style>
+                                    <FontWeight>SemiBold</FontWeight>
+                                    <Color>black</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                        </Textbox>
+                        <ColSpan>1</ColSpan>
+                        <RowSpan>1</RowSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="TextBox21">
+                          <Left>0in</Left>
+                          <Top>0in</Top>
+                          <Height>18pt</Height>
+                          <Width>116.25pt</Width>
+                          <Style>
+                            <BackgroundColor>#cccbcb</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <Border>
+                              <Color>#d3d3d3</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Gender</Value>
+                                  <Style>
+                                    <FontWeight>SemiBold</FontWeight>
+                                    <Color>black</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                        </Textbox>
+                        <ColSpan>1</ColSpan>
+                        <RowSpan>1</RowSpan>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>18pt</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="TextBox10">
+                          <Left>0in</Left>
+                          <Top>0in</Top>
+                          <Height>18pt</Height>
+                          <Width>115.5pt</Width>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!name.Value</Value>
+                                  <Style>
+                                    <Color>black</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                        </Textbox>
+                        <ColSpan>1</ColSpan>
+                        <RowSpan>1</RowSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="TextBox11">
+                          <Left>0in</Left>
+                          <Top>0in</Top>
+                          <Height>18pt</Height>
+                          <Width>115.5pt</Width>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!birthDate.Value</Value>
+                                  <Style>
+                                    <Format>dd-MMM-yyyy</Format>
+                                    <Color>black</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                        </Textbox>
+                        <ColSpan>1</ColSpan>
+                        <RowSpan>1</RowSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="TextBox12">
+                          <Left>0in</Left>
+                          <Top>0in</Top>
+                          <Height>18pt</Height>
+                          <Width>116.25pt</Width>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!className.Value</Value>
+                                  <Style>
+                                    <Color>black</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                        </Textbox>
+                        <ColSpan>1</ColSpan>
+                        <RowSpan>1</RowSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="TextBox20">
+                          <Left>0in</Left>
+                          <Top>0in</Top>
+                          <Height>18pt</Height>
+                          <Width>116.25pt</Width>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!religion.Value</Value>
+                                  <Style>
+                                    <Color>black</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                        </Textbox>
+                        <ColSpan>1</ColSpan>
+                        <RowSpan>1</RowSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="TextBox22">
+                          <Left>0in</Left>
+                          <Top>0in</Top>
+                          <Height>18pt</Height>
+                          <Width>116.25pt</Width>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!gender.Value</Value>
+                                  <Style>
+                                    <Color>black</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                        </Textbox>
+                        <ColSpan>1</ColSpan>
+                        <RowSpan>1</RowSpan>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <KeepWithGroup>After</KeepWithGroup>
+                </TablixMember>
+                <TablixMember>
+                  <Group Name="Details1" />
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+          </Tablix>
+          <Textbox Name="admIndex1">
+            <Left>7.5pt</Left>
+            <Top>21.75pt</Top>
+            <Height>13.5pt</Height>
+            <Width>204.75pt</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!admIndex.Value, "schoolset")</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+          </Textbox>
+          <Textbox Name="admDate1">
+            <Left>577.5pt</Left>
+            <Top>21pt</Top>
+            <Height>15pt</Height>
+            <Width>104.25pt</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!admDate.Value, "schoolset")</Value>
+                    <Style>
+                      <Format>dd-MMM-yyyy</Format>
+                      <Color>Black</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+          </Textbox>
+          <Textbox Name="g_fullname1">
+            <Left>17.25pt</Left>
+            <Top>83.25pt</Top>
+            <Height>15.75pt</Height>
+            <Width>194.25pt</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!g_fullname.Value, "schoolset")</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+          </Textbox>
+          <Textbox Name="g_email1">
+            <Left>17.25pt</Left>
+            <Top>101.25pt</Top>
+            <Height>16.5pt</Height>
+            <Width>194.25pt</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!g_email.Value, "schoolset")</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+          </Textbox>
+          <Textbox Name="g_phone11">
+            <Left>16.5pt</Left>
+            <Top>120pt</Top>
+            <Height>15pt</Height>
+            <Width>194.25pt</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!g_phone1.Value, "schoolset")</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+          </Textbox>
+          <Textbox Name="g_address1">
+            <Left>17.25pt</Left>
+            <Top>138.75pt</Top>
+            <Height>15pt</Height>
+            <Width>194.25pt</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!g_address.Value, "schoolset")</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+          </Textbox>
+          <Textbox Name="TextBox2">
+            <Left>239.25pt</Left>
+            <Top>60.75pt</Top>
+            <Height>15.30469pt</Height>
+            <Width>203.3086pt</Width>
+            <ZIndex>18</ZIndex>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Father</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>Black</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+          </Textbox>
+          <Textbox Name="TextBox4">
+            <Left>242.0273pt</Left>
+            <Top>83.57812pt</Top>
+            <Height>15.75pt</Height>
+            <Width>194.25pt</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!f_fullname.Value,"schoolset")</Value>
+                    <Style>
+                      <Color>Black</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+          </Textbox>
+          <Textbox Name="TextBox5">
+            <Left>242.0273pt</Left>
+            <Top>101.5781pt</Top>
+            <Height>16.5pt</Height>
+            <Width>194.25pt</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!f_email.Value, "schoolset")</Value>
+                    <Style>
+                      <Color>black</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+          </Textbox>
+          <Textbox Name="TextBox6">
+            <Left>242.0273pt</Left>
+            <Top>120.3281pt</Top>
+            <Height>15pt</Height>
+            <Width>195pt</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!f_phone1.Value, "schoolset")</Value>
+                    <Style>
+                      <Color>black</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+          </Textbox>
+          <Textbox Name="TextBox18">
+            <Left>242.0273pt</Left>
+            <Top>137.5781pt</Top>
+            <Height>15pt</Height>
+            <Width>194.25pt</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!f_address.Value, "schoolset")</Value>
+                    <Style>
+                      <Color>black</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+          </Textbox>
+          <Line Name="Line2">
+            <Left>0pt</Left>
+            <Top>0pt</Top>
+            <Height>0pt</Height>
+            <Width>671.7656pt</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Color>#b0b0b0</Color>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Line Name="Line5">
+            <Left>7.5pt</Left>
+            <Top>172.5pt</Top>
+            <Height>0pt</Height>
+            <Width>671.7656pt</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Color>#b0b0b0</Color>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Textbox Name="TextBox23">
+            <Left>465pt</Left>
+            <Top>60pt</Top>
+            <Height>15.30469pt</Height>
+            <Width>203.3086pt</Width>
+            <ZIndex>18</ZIndex>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Mother</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>black</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+          </Textbox>
+          <Textbox Name="TextBox24">
+            <Left>467.7773pt</Left>
+            <Top>82.82812pt</Top>
+            <Height>15.75pt</Height>
+            <Width>194.25pt</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!m_fullname.Value,"schoolset")</Value>
+                    <Style>
+                      <Color>black</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+          </Textbox>
+          <Textbox Name="TextBox25">
+            <Left>467.7773pt</Left>
+            <Top>100.8281pt</Top>
+            <Height>16.5pt</Height>
+            <Width>194.25pt</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!m_email.Value, "schoolset")</Value>
+                    <Style>
+                      <Color>black</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+          </Textbox>
+          <Textbox Name="TextBox28">
+            <Left>467.7773pt</Left>
+            <Top>119.5781pt</Top>
+            <Height>15pt</Height>
+            <Width>195pt</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!m_phone1.Value, "schoolset")</Value>
+                    <Style>
+                      <Color>black</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+          </Textbox>
+          <Textbox Name="TextBox29">
+            <Left>467.7773pt</Left>
+            <Top>138.3281pt</Top>
+            <Height>15pt</Height>
+            <Width>194.25pt</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!m_address.Value, "schoolset")</Value>
+                    <Style>
+                      <Color>black</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+          </Textbox>
+          <Textbox Name="TextBox35">
+            <Left>12.75pt</Left>
+            <Top>182.25pt</Top>
+            <Height>15.30469pt</Height>
+            <Width>203.3086pt</Width>
+            <ZIndex>18</ZIndex>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Emergency Information</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>black</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+          </Textbox>
+          <Textbox Name="TextBox36">
+            <Left>84.52734pt</Left>
+            <Top>205.0781pt</Top>
+            <Height>15.75pt</Height>
+            <Width>130.5pt</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!e_relation.Value,"schoolset")</Value>
+                    <Style>
+                      <Format>=</Format>
+                      <Color>black</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+          </Textbox>
+          <Textbox Name="TextBox37">
+            <Left>15.52734pt</Left>
+            <Top>223.0781pt</Top>
+            <Height>16.5pt</Height>
+            <Width>194.25pt</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!e_contact.Value, "schoolset")</Value>
+                    <Style>
+                      <Color>black</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+          </Textbox>
+          <Textbox Name="TextBox38">
+            <Left>14.77734pt</Left>
+            <Top>244.0781pt</Top>
+            <Height>15pt</Height>
+            <Width>195pt</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!e_email.Value, "schoolset")</Value>
+                    <Style>
+                      <Color>black</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+          </Textbox>
+          <Textbox Name="TextBox40">
+            <Left>15pt</Left>
+            <Top>204pt</Top>
+            <Height>15pt</Height>
+            <Width>69.75pt</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Relationship</Value>
+                    <Style>
+                      <FontWeight>SemiBold</FontWeight>
+                      <Color>Black</Color>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value> </Value>
+                    <Style>
+                      <Color>Black</Color>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>:</Value>
+                    <Style>
+                      <FontWeight>SemiBold</FontWeight>
+                      <Color>Black</Color>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value> </Value>
+                    <Style>
+                      <Color>Black</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+          </Textbox>
+        </ReportItems>
+        <Height>381.75pt</Height>
+      </Body>
+      <Width>689.25pt</Width>
+      <Page>
+        <PageHeight>841.68pt</PageHeight>
+        <PageWidth>595.44pt</PageWidth>
+        <PageHeader>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+          <Height>38.25pt</Height>
+          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <PrintOnLastPage>true</PrintOnLastPage>
+          <ReportItems>
+            <Rectangle Name="Rectangle3">
+              <Left>0pt</Left>
+              <Top>0pt</Top>
+              <Height>37.42969pt</Height>
+              <Width>689.25pt</Width>
+              <Style>
+                <BackgroundColor>#555b63</BackgroundColor>
+                <Border>
+                  <Color>Gray</Color>
+                  <Style>None</Style>
+                </Border>
+              </Style>
+              <ReportItems>
+                <Textbox Name="Title">
+                  <Left>0pt</Left>
+                  <Top>4.58568pt</Top>
+                  <Height>27.54pt</Height>
+                  <Width>137.2658pt</Width>
+                  <ZIndex>1</ZIndex>
+                  <Style>
+                    <BackgroundColor>#555b63</BackgroundColor>
+                    <PaddingLeft>5.76pt</PaddingLeft>
+                    <PaddingTop>1.44pt</PaddingTop>
+                  </Style>
+                  <KeepTogether>true</KeepTogether>
+                  <Paragraphs>
+                    <Paragraph>
+                      <TextRuns>
+                        <TextRun>
+                          <Value>﻿ </Value>
+                          <Style>
+                            <FontSize>12.384pt</FontSize>
+                            <FontWeight>Bold</FontWeight>
+                            <Color>#ffffff</Color>
+                          </Style>
+                        </TextRun>
+                        <TextRun>
+                          <Value>Admission Certificate</Value>
+                          <Style>
+                            <Color>#ffffff</Color>
+                          </Style>
+                        </TextRun>
+                      </TextRuns>
+                      <Style>
+                        <TextAlign>Left</TextAlign>
+                      </Style>
+                      <SpaceBefore>3.6pt</SpaceBefore>
+                    </Paragraph>
+                  </Paragraphs>
+                </Textbox>
+              </ReportItems>
+              <KeepTogether>true</KeepTogether>
+            </Rectangle>
+          </ReportItems>
+        </PageHeader>
+        <PageFooter>
+          <Style>
+            <BackgroundColor>White</BackgroundColor>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+          <Height>33pt</Height>
+          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <PrintOnLastPage>true</PrintOnLastPage>
+        </PageFooter>
+        <LeftMargin>18pt</LeftMargin>
+        <RightMargin>18pt</RightMargin>
+        <TopMargin>18pt</TopMargin>
+        <BottomMargin>18pt</BottomMargin>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Description>Detail of an individual Adventure Works order. This report can be accessed as a drillthrough report from the Employee Sales Summary and Territory Sales drilldown report. This report illustrates the use of lists, tables, parameters, and expressions.</Description>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="AdventureWorks">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString>Data Source=dataplatformdemodata.syncfusion.com;Initial Catalog=AdventureWorks;user id=demoreadonly@data-platform-demo;password=N@c)=Y8s*1&amp;dh</ConnectString>
+        <rd:IsDesignState>true</rd:IsDesignState>
+      </ConnectionProperties>
+      <rd:ImpersonateUser>false</rd:ImpersonateUser>
+    </DataSource>
+    <DataSource Name="school">
+      <ConnectionProperties>
+        <DataProvider>WebAPI</DataProvider>
+        <ConnectString>{"MethodType":"Get","SecurityType":"None","URL":"http://nvsapi.smartschool.sd/api/Admission/GetAdmission?ph=+249912302988","IsCSVFirstRowHeader":true,"DataFormat":"JSON","Separator":"comma","Delimiter":""}</ConnectString>
+      </ConnectionProperties>
+      <rd:ImpersonateUser>false</rd:ImpersonateUser>
+    </DataSource>
+    <DataSource Name="DataSource1">
+      <ConnectionProperties>
+        <DataProvider>WebAPI</DataProvider>
+        <ConnectString>{"MethodType":"Get","SecurityType":"None","URL":"http://localhost:5117/api/admission/getadmission?ph=+20988776655","IsCSVFirstRowHeader":true,"DataFormat":"JSON","Separator":"comma","Delimiter":""}</ConnectString>
+      </ConnectionProperties>
+      <rd:ImpersonateUser>false</rd:ImpersonateUser>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="schoolset">
+      <Fields>
+        <Field Name="adm_id">
+          <DataField>adm_id</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="admIndex">
+          <DataField>admIndex</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="admDate">
+          <DataField>admDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="gphone_isFound">
+          <DataField>gphone_isFound</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="gphone_num">
+          <DataField>gphone_num</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="g_title">
+          <DataField>g_title</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="g_id">
+          <DataField>g_id</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="g_fullname">
+          <DataField>g_fullname</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="g_firstName">
+          <DataField>g_firstName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="g_secondName">
+          <DataField>g_secondName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="g_middleName">
+          <DataField>g_middleName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="g_surname">
+          <DataField>g_surname</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="g_email">
+          <DataField>g_email</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="g_phone1">
+          <DataField>g_phone1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="g_phone2">
+          <DataField>g_phone2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="g_address">
+          <DataField>g_address</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="g_location">
+          <DataField>g_location</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="e_id">
+          <DataField>e_id</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="e_relation">
+          <DataField>e_relation</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="e_contact">
+          <DataField>e_contact</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="e_email">
+          <DataField>e_email</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="mr_id">
+          <DataField>mr_id</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="mr_status">
+          <DataField>mr_status</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="f_id">
+          <DataField>f_id</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="f_firstName">
+          <DataField>f_firstName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="f_secondName">
+          <DataField>f_secondName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="f_middleName">
+          <DataField>f_middleName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="f_surname">
+          <DataField>f_surname</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="f_email">
+          <DataField>f_email</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="f_phone1">
+          <DataField>f_phone1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="f_phone2">
+          <DataField>f_phone2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="f_address">
+          <DataField>f_address</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="m_id">
+          <DataField>m_id</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="m_fullname">
+          <DataField>m_fullname</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="m_email">
+          <DataField>m_email</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="m_phone1">
+          <DataField>m_phone1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="m_phone2">
+          <DataField>m_phone2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="m_address">
+          <DataField>m_address</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="std_id">
+          <DataField>std_id</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="name">
+          <DataField>name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="birthDate">
+          <DataField>birthDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="className">
+          <DataField>className</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="religion">
+          <DataField>religion</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="gender">
+          <DataField>gender</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="imgPath">
+          <DataField>imgPath</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="birthCrtPath">
+          <DataField>birthCrtPath</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="passportCrtPath">
+          <DataField>passportCrtPath</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="docOneCrtPath">
+          <DataField>docOneCrtPath</DataField>
+          <rd:TypeName>System.Object</rd:TypeName>
+        </Field>
+        <Field Name="docTwoCrtPath">
+          <DataField>docTwoCrtPath</DataField>
+          <rd:TypeName>System.Object</rd:TypeName>
+        </Field>
+        <Field Name="f_fullname">
+          <DataField>f_fullname</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource1</DataSourceName>
+        <CommandType>Text</CommandType>
+        <CommandText>{"Name":"getadmission","Columns":[]}</CommandText>
+        <QueryDesignerState xmlns="http://schemas.microsoft.com/ReportingServices/QueryDefinition/Relational">
+          <Tables>
+            <Table Name="getadmission" Schema="">
+              <Columns>
+                <Column Name="adm_id" IsDuplicate="False" IsSelected="True" />
+                <Column Name="admIndex" IsDuplicate="False" IsSelected="True" />
+                <Column Name="admDate" IsDuplicate="False" IsSelected="True" />
+                <Column Name="gphone_isFound" IsDuplicate="False" IsSelected="True" />
+                <Column Name="gphone_num" IsDuplicate="False" IsSelected="True" />
+                <Column Name="g_title" IsDuplicate="False" IsSelected="True" />
+                <Column Name="g_id" IsDuplicate="False" IsSelected="True" />
+                <Column Name="g_fullname" IsDuplicate="False" IsSelected="True" />
+                <Column Name="g_firstName" IsDuplicate="False" IsSelected="True" />
+                <Column Name="g_secondName" IsDuplicate="False" IsSelected="True" />
+                <Column Name="g_middleName" IsDuplicate="False" IsSelected="True" />
+                <Column Name="g_surname" IsDuplicate="False" IsSelected="True" />
+                <Column Name="g_email" IsDuplicate="False" IsSelected="True" />
+                <Column Name="g_phone1" IsDuplicate="False" IsSelected="True" />
+                <Column Name="g_phone2" IsDuplicate="False" IsSelected="True" />
+                <Column Name="g_address" IsDuplicate="False" IsSelected="True" />
+                <Column Name="g_location" IsDuplicate="False" IsSelected="True" />
+                <Column Name="e_id" IsDuplicate="False" IsSelected="True" />
+                <Column Name="e_relation" IsDuplicate="False" IsSelected="True" />
+                <Column Name="e_contact" IsDuplicate="False" IsSelected="True" />
+                <Column Name="e_email" IsDuplicate="False" IsSelected="True" />
+                <Column Name="mr_id" IsDuplicate="False" IsSelected="True" />
+                <Column Name="mr_status" IsDuplicate="False" IsSelected="True" />
+                <Column Name="f_id" IsDuplicate="False" IsSelected="True" />
+                <Column Name="f_firstName" IsDuplicate="False" IsSelected="True" />
+                <Column Name="f_secondName" IsDuplicate="False" IsSelected="True" />
+                <Column Name="f_middleName" IsDuplicate="False" IsSelected="True" />
+                <Column Name="f_surname" IsDuplicate="False" IsSelected="True" />
+                <Column Name="f_email" IsDuplicate="False" IsSelected="True" />
+                <Column Name="f_phone1" IsDuplicate="False" IsSelected="True" />
+                <Column Name="f_phone2" IsDuplicate="False" IsSelected="True" />
+                <Column Name="f_address" IsDuplicate="False" IsSelected="True" />
+                <Column Name="m_id" IsDuplicate="False" IsSelected="True" />
+                <Column Name="m_fullname" IsDuplicate="False" IsSelected="True" />
+                <Column Name="m_email" IsDuplicate="False" IsSelected="True" />
+                <Column Name="m_phone1" IsDuplicate="False" IsSelected="True" />
+                <Column Name="m_phone2" IsDuplicate="False" IsSelected="True" />
+                <Column Name="m_address" IsDuplicate="False" IsSelected="True" />
+                <Column Name="std_id" IsDuplicate="False" IsSelected="True" />
+                <Column Name="name" IsDuplicate="False" IsSelected="True" />
+                <Column Name="birthDate" IsDuplicate="False" IsSelected="True" />
+                <Column Name="className" IsDuplicate="False" IsSelected="True" />
+                <Column Name="religion" IsDuplicate="False" IsSelected="True" />
+                <Column Name="gender" IsDuplicate="False" IsSelected="True" />
+                <Column Name="imgPath" IsDuplicate="False" IsSelected="True" />
+                <Column Name="birthCrtPath" IsDuplicate="False" IsSelected="True" />
+                <Column Name="passportCrtPath" IsDuplicate="False" IsSelected="True" />
+                <Column Name="docOneCrtPath" IsDuplicate="False" IsSelected="True" />
+                <Column Name="docTwoCrtPath" IsDuplicate="False" IsSelected="True" />
+                <Column Name="f_fullname" IsDuplicate="False" IsSelected="True" />
+              </Columns>
+              <SchemaLevels>
+                <SchemaInfo Name="getadmission" SchemaType="Table" />
+              </SchemaLevels>
+            </Table>
+          </Tables>
+        </QueryDesignerState>
+      </Query>
+    </DataSet>
+  </DataSets>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:PageUnit>Px</rd:PageUnit>
+</Report>

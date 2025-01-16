@@ -5,6 +5,7 @@ import DeleteIcon from "../../icons/DeleteIcon";
 
 const StudentInfo = () => {
   const { data, setData } = useFormContext();
+
   const handleDelete = (index) => {
     setData((prevData) => ({
       ...prevData,
